@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid2</title>
+    <style>
+        .wrap {
+            width: 800px;
+            height: 430px;
+            background-color: #ccc;
+            display: grid;
+            grid-template-columns: 240px auto;
+            Grid-template-rows: 100px 200px 1fr;
+            Grid-template-areas:
+                "header header "
+                "menu content"
+                "menu footer ";
+        }
+
+        .header {
+            background-color: cyan;
+            grid-area: header;
+        }
+
+        .menu {
+            background-color: darkorange;
+            grid-area: menu;
+        }
+
+        .content {
+            background-color: deeppink;
+            grid-area: content;
+        }
+
+        .footer {
+            background-color: dodgerblue;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">header</div>
+        <div class="menu">menu</div>
+        <div class="content">content</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex shrink</title>
+    <style>
+        .wrap {
+            width: 500px;
+            height: 100vh;
+            background-color: #ccc;
+            display: flex;
+            flex-direction: row;
+            /* 主軸上的排列 */
+            justify-content: flex-start;
+            align-items: stretch;
+
+        }
+
+        .box {
+            width: 500px;
+            height: 100px;
+            outline: 1px solid red;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        .box2 {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box">box333</div>
+    </div>
+</body>
+
+</html>

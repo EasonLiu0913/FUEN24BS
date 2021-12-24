@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pseudo</title>
+
+    <style>
+        .wrap {
+            width: 800px;
+            height: 800px;
+            background-color: #ccc;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+        }
+
+        .wrap::before {
+            content: "000";
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap clearfix">
+        <!-- ::before -->
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="clear"></div>
+    </div>
+
+    <footer></footer>
+
+    <script>
+        function abc() {
+            console.log("abc");
+        }
+    </script>
+</body>
+
+</html>
