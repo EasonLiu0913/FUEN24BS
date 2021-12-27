@@ -30,6 +30,10 @@
             margin-right: auto;
         }
 
+        .w-100 {
+            width: 100%;
+        }
+
         .container {
             width: 960px;
             margin: 40px auto;
@@ -37,6 +41,10 @@
 
         .row {
             display: flex;
+        }
+
+        .d-flex {
+            display: flex !important;
         }
 
         .justify-content-between {
@@ -91,6 +99,17 @@
 
         .sub-title {
             width: 300px;
+        }
+
+        .model-demo {
+            width: 500px;
+            height: 700px;
+        }
+
+        .model-demo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -159,6 +178,26 @@
                 <span>
                     Made with love in Los Angeles from all natural eco-friendly materials.
                 </span>
+            </div>
+
+            <div class="row">
+                <div class="demo-area d-flex justify-content-between w-100">
+                    <div class="product-info">
+                        <div class="items">
+                            <div class="img-300">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                    alt="">
+                            </div>
+                            <p>Linen Top / Blue</p>
+                            <p>$50.00</p>
+                        </div>
+                    </div>
+
+                    <div class="model-demo">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1587757476336-N31G7MJXSMQ4QZSEJ6CO/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/lauren-winter-20150715-IMG_0352-v1-FINAL.jpg"
+                            alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </main>
