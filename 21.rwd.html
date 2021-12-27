@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 手機 */
+        h1 {
+            color: brown;
+        }
+
+        /* 平板 會得到兩個 h1 的 ＣＳＳ*/
+        @media screen and (min-width:375px) and (max-width:1199px) {
+            h1 {
+                color: cornflowerblue;
+            }
+        }
+
+        /* 桌機 會得到三個 h1 的 ＣＳＳ*/
+        @media screen and (min-width:1200px) {
+            h1 {
+                color: deeppink;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+</body>
+
+</html>
