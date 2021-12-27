@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+</head>
+
+<body>
+    <button>click</button>
+    <h1 id="myH1" class="title">Hello World1</h1>
+    <h1 id="myH1" class="title">Hello World2</h1>
+    <h1 id="myH1" class="title">Hello World3</h1>
+    <!-- <h1> -->
+    <!-- <h1> -->
+    <script>
+        const h1 = document.getElementsByClassName('title');
+        console.log('h1', h1);
+
+        // 偽陣列
+        const querryH1 = document.querySelectorAll('.title');
+        console.log('querryH1', querryH1);
+
+        querryH1.forEach((value, index) => {
+            if (index === 0) value.style.color = 'yellow';
+            if (index === 1) value.style.color = 'green';
+            if (index === 2) value.style.color = 'red';
+        });
+
+        $('.title').each()
+
+    </script>
+</body>
+
+</html>
