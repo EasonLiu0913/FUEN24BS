@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax</title>
+</head>
+
+<body>
+    <h1 id="result"></h1>
+    <script>
+        // fetch('./json/myData.json')
+        //     .then(function (response) {
+        //         return response.json();
+        //     })
+        //     .then(function (myData) {
+        //         console.log(myData);
+        //         document.getElementById('result').innerHTML = myData.data.name;
+        //     });
+
+        function a() {
+            setTimeout(() => {
+                console.log('a');
+                const username = 'John';
+                b(username);
+
+            }, 3000);
+        }
+
+        function b(username) {
+            setTimeout(() => {
+                console.log('b');
+                c();
+            }, 3000);
+        }
+
+        function c(age) {
+            setTimeout(() => {
+                console.log('c');
+            }, 3000);
+        }
+
+        // 以前需要非同步的執行，也就是函式要按順序執行時，只能使用 call back 
+        // call back 的函式可以用變數帶入 function，但我這邊先簡化，以看得懂執行順序為主
+        a();
+
+
+        // Promise 物件用來處理按順序執行、又不會變成函式裡面再執行另外一個函式的架構
+        fetch('./json/myData.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myData) {
+                console.log(myData);
+                document.getElementById('result').innerHTML = myData.data.name;
+            });
+
+
+        // async await (其實也是 Promise 物件) 呼叫的寫法可以再稍微簡化一點
+        // 只需要看有 await 就是會等執行結果做完，再做下一行
+
+        // 例如我們這邊做兩個函式 aaa 跟 bbb
+        // 我希望把 aaa 回傳的結果，丟到 bbb 裡面去執行，所以需要非同步的執行
+        const aaa = () => {
+            return new Promise((resolve, reject) => {
+                const success = true;
+                setTimeout(() => {
+                    if (success) {
+                        resolve('John');
+                    }
+                    else {
+                        reject('error');
+                    }
+                }, 5000);
+            })
+        }
+
+        const bbb = (username) => {
+            return new Promise((resolve, reject) => {
+                const success = true;
+                setTimeout(() => {
+                    if (success) {
+                        resolve(`I got string: ${username} form aaa`);
+                    }
+                    else {
+                        reject('error');
+                    }
+                }, 5000);
+            })
+        }
+
+
+        async function x() {
+            const username = await aaa();
+            const result = await bbb(username);
+            console.log('result', result);
+        }
+
+        x();
+    </script>
+</body>
+
+</html>
