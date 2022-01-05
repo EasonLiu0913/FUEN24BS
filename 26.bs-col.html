@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+
+
+    <style>
+        .img-300 {
+            width: 100%;
+
+        }
+
+        .img-300 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .box {
+            border: 1px solid red;
+            height: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- container 容器決定最外圍的寬度 -->
+    <div class="container">
+        <h1>商品展示 demo</h1>
+        <!-- row 橫過來 -->
+        <div class="row">
+            <!-- col-6 = 50% -->
+            <div class="col-12 col-sm-6 ">
+                <!-- <div class="d-flex flex-column"> -->
+                <div class="items">
+                    <div class="img-300">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                            alt="">
+                    </div>
+                    <p>Linen Top / Blue</p>
+                </div>
+
+                <!-- </div> -->
+
+            </div>
+            <!-- col-6 = 50% -->
+            <div class="col-12 col-sm-6">
+                <!-- col-6 = 爸爸的 50% =  25% * row  -->
+                <!-- 小商品區 -->
+                <div class="d-flex flex-wrap align-content-between h-100">
+                    <div class="col-12 col-sm-6">
+                        <div class="items">
+                            <div class="img-300">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                    alt="">
+                            </div>
+                            <p>Linen Top / Blue</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="items">
+                            <div class="img-300">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                    alt="">
+                            </div>
+                            <p>Linen Top / Blue</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="items">
+                            <div class="img-300">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                    alt="">
+                            </div>
+                            <p>Linen Top / Blue</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="items">
+                            <div class="img-300">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                    alt="">
+                            </div>
+                            <p>Linen Top / Blue</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <h1>商品展示</h1> -->
+            </div>
+
+            <!-- <div class="items">
+                <div class="img-300">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                        alt="">
+                </div>
+                <p>Linen Top / Blue</p>
+            </div> -->
+
+        </div>
+
+        <!-- 五欄式排版 -->
+        <h1>五欄式排版</h1>
+        <div class="row">
+            <div class="box col-12 col-sm">box1</div>
+            <div class="box col-12 col-sm">box2</div>
+            <div class="box col-12 col-sm">box3</div>
+            <div class="box col-12 col-sm">box4</div>
+            <div class="box col-12 col-sm">box5</div>
+        </div>
+
+        <!-- 中間特大的排版 -->
+        <h1>中間特大的排版</h1>
+        <div class="row">
+            <div class="box col-12 col-sm">box1</div>
+            <div class="box col-12 col-sm-3">box2</div>
+            <div class="box col-12 col-sm-4">box3</div>
+            <div class="box col-12 col-sm">box4</div>
+            <div class="box col-12 col-sm">box5</div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
